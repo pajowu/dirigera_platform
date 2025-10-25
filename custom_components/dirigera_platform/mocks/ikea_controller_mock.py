@@ -29,7 +29,7 @@ class ikea_controller_mock(SensorEntity):
     @property
     def device_info(self) -> DeviceInfo:
         return DeviceInfo(
-            identifiers={("dirigera_platform", self._unique_id)},
+            identifiers={("dirigera_platform", self._unique_id), ("dirigera_platform", self._json_data.attributes.serial_number)},
             name=self._name,
             manufacturer="IKEA of Sweden",
             model="Mock Controler",

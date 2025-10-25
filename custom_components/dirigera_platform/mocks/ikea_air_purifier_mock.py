@@ -60,7 +60,7 @@ class ikea_starkvind_air_purifier_mock_device:
     def device_info(self) -> DeviceInfo:
         logger.info("Got device_info call on airpurifier mock...")
         return DeviceInfo(
-            identifiers={("dirigera_platform", self._unique_id)},
+            identifiers={("dirigera_platform", self._unique_id), ("dirigera_platform", self._json_data.attributes.serial_number)},
             name=self._name,
             manufacturer="MOCK",
             model="Mock 1.0",
