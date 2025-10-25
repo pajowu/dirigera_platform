@@ -92,7 +92,7 @@ class ikea_base_device:
     def device_info(self) -> DeviceInfo:
         
         return DeviceInfo(
-            identifiers={("dirigera_platform", self._json_data.id)},
+            identifiers={("dirigera_platform", self._json_data.id), ("dirigera_platform", self._json_data.attributes.serial_number)},
             name=self.name,
             manufacturer=self._json_data.attributes.manufacturer,
             model=self._json_data.attributes.model,
